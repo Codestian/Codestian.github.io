@@ -75,11 +75,13 @@ header {
     align-items: center;
 
     h2 {
+        width: 100%;
+        max-width: 720px;
         text-align: center;
         color: $primary;
         font-size: 1.8rem;
         text-transform: uppercase;
-        padding-bottom: 8px;
+        padding: 0px 32px 8px 32px;
         margin: 0px 128px;
         border-bottom: 2px solid $primary;
     }
