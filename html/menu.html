@@ -37,19 +37,65 @@
         </header>
         <section class="menu">
             <div class="category">
-                <button>Breakfast</button>
-                <button>Lunch / Dinner</button>
-                <button>Drinks</button>
-                <button>Desserts</button>
+                <button onclick="selectCategory(0)" class="menu-button">Breakfast</button>
+                <button onclick="selectCategory(1)" class="menu-button" class="selected">Lunch / Dinner</button>
+                <button onclick="selectCategory(2)" class="menu-button">Drinks</button>
+                <button onclick="selectCategory(3)" class="menu-button">Desserts</button>
             </div>
-        </section>  
+            <div class="menu-content">test 1</div>
+            <div class="menu-content">
+
+                <div class="item">
+                    <div class="title">
+                        <h3>Spanish Paella</h3>
+                        <h4>$12.45</h4>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, cum aut.</p>
+                </div>
+
+                <div class="item">
+                    <div class="title">
+                        <h3>Spanish Paella</h3>
+                        <h4>$12.45</h4>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, cum aut.</p>
+                </div>
+
+                <div class="item">
+                    <div class="title">
+                        <h3>Spanish Paella</h3>
+                        <h4>$12.45</h4>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, cum aut.</p>
+                </div>
+
+            </div>
+            <div class="menu-content">test 3</div>
+            <div class="menu-content">test 4</div>
+        </section>
     </main>
 
     <footer>
 
     </footer>
 
+    <script>
 
+        selectCategory(1)
+
+        function selectCategory(id) {
+
+            const buttons = document.querySelectorAll('.menu-button')
+            const categories = document.querySelectorAll('.menu-content')
+
+            categories.forEach(category => category.style.display = 'none')
+            buttons.forEach(button => button.classList.remove('selected'))
+
+            buttons[id].classList.add('selected')
+            categories[id].style.display = 'flex'
+
+        }
+    </script>
 </body>
 
 </html>

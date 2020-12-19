@@ -1,0 +1,24 @@
+$primary: rgb(139, 132, 64);
+
+.item {
+    padding: 16px;
+    flex: 0 0 50%;
+    border-bottom: 1px solid lightgray;
+
+    .title {
+        display: flex;
+        padding-bottom: 8px;
+
+        justify-content: space-between;
+        h3, h4 {
+            color: $primary;
+            font-size: 1.4rem;
+        }
+    }
+
+    p {
+        color: rgb(138, 138, 138);
+        text-transform: uppercase;
+        font-size: 0.8rem;
+    }
+}
