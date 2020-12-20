@@ -32,6 +32,7 @@ header {
   justify-content: center;
   align-items: center;
   padding: 32px 32px 0px 32px;
+  text-align: center;
 }
 
 header h1 {
@@ -58,10 +59,22 @@ header p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .menu .category {
+  display: flex;
   padding: 32px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .menu .category {
+    flex-direction: column;
+    padding: 32px 32px 0px 32px;
+  }
 }
 
 .menu .category button {
@@ -72,6 +85,13 @@ header p {
   padding: 8px 16px;
   font-size: 0.8rem;
   margin: 0px 8px;
+}
+
+@media (max-width: 768px) {
+  .menu .category button {
+    width: 100%;
+    margin: 8px 0px;
+  }
 }
 
 .menu .category button:active {
@@ -89,5 +109,11 @@ header p {
   display: flex;
   flex-wrap: wrap;
   padding: 16px 0px 32px 0px;
+}
+
+@media (max-width: 768px) {
+  .menu .menu-content {
+    padding: 16px 32px 32px 32px;
+  }
 }
 /*# sourceMappingURL=menu.css.map */

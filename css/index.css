@@ -47,6 +47,12 @@ header .content h1 {
   padding-bottom: 16px;
 }
 
+@media (max-width: 768px) {
+  header .content h1 {
+    font-size: 1.8em;
+  }
+}
+
 header .content p {
   text-transform: uppercase;
   font-size: 0.8rem;
@@ -54,12 +60,31 @@ header .content p {
   line-height: 150%;
 }
 
+@media (max-width: 768px) {
+  header .content p {
+    font-size: 0.6em;
+  }
+}
+
 .infobox {
   width: 100%;
   max-width: 1366px;
   display: flex;
   align-items: center;
-  padding: 32px 0px 0px 0px;
+  padding-top: 32px;
+}
+
+@media (max-width: 768px) {
+  .infobox {
+    flex-direction: column-reverse;
+    padding-top: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .infobox:first-of-type {
+    flex-direction: column;
+  }
 }
 
 .infobox .left,
@@ -68,9 +93,18 @@ header .content p {
   flex: 1;
 }
 
+@media (max-width: 768px) {
+  .infobox .left,
+  .infobox .right {
+    padding: 16px;
+    text-align: center;
+  }
+}
+
 .infobox .left img,
 .infobox .right img {
-  width: 100%;
+  width: calc(100% - 20px);
+  margin-right: 10px;
   height: 320px;
   object-fit: cover;
   box-shadow: 10px 10px 0px 0px rgba(139, 132, 64, 0.75);
@@ -81,6 +115,13 @@ header .content p {
   color: #8b8440;
   font-size: 2.2rem;
   padding-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+  .infobox .left h2,
+  .infobox .right h2 {
+    font-size: 1.8rem;
+  }
 }
 
 .infobox .left p,
@@ -96,6 +137,12 @@ header .content p {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media (max-width: 480px) {
+  .menu {
+    padding: 16px;
+  }
 }
 
 .menu h2 {
@@ -115,6 +162,12 @@ header .content p {
   display: flex;
   flex-wrap: wrap;
   padding: 16px 0px 32px 0px;
+}
+
+@media (max-width: 768px) {
+  .menu .content {
+    flex-direction: column;
+  }
 }
 
 .menu button {

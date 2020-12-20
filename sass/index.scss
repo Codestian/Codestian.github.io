@@ -1,7 +1,5 @@
-@import './components/_menuitem.scss';
-
-$white: rgb(255, 255, 255);
-$primary: rgb(139, 132, 64);
+@import "./components/_menuitem.scss";
+@import "./components/_variables.scss";
 
 header {
     width: 100%;
@@ -26,6 +24,10 @@ header {
             font-size: 2.8em;
             line-height: 1.25em;
             padding-bottom: 16px;
+
+            @media (max-width: $breakpoint-tablet) {
+                font-size: 1.8em;
+            }
         }
 
         p {
@@ -33,6 +35,10 @@ header {
             font-size: 0.8rem;
             font-weight: bold;
             line-height: 150%;
+
+            @media (max-width: $breakpoint-tablet) {
+                font-size: 0.6em;
+            }
         }
     }
 }
@@ -42,23 +48,45 @@ header {
     max-width: 1366px;
     display: flex;
     align-items: center;
-    padding: 32px 0px 0px 0px;
+    padding-top: 32px;
+
+    @media (max-width: $breakpoint-tablet) {
+        flex-direction: column-reverse;
+        padding-top: 16px;
+    }
+
+    &:first-of-type {
+        @media (max-width: $breakpoint-tablet) {
+            flex-direction: column;
+        }
+    }
 
     .left,
     .right {
         padding: 32px;
-
         flex: 1;
+
+        @media (max-width: $breakpoint-tablet) {
+            padding: 16px;
+            text-align: center;
+        }
+
         img {
-            width: 100%;
+            width: calc(100% - 20px);
+            margin-right: 10px;
             height: 320px;
             object-fit: cover;
             box-shadow: 10px 10px 0px 0px rgba(139, 132, 64, 0.75);
         }
+
         h2 {
             color: $primary;
             font-size: 2.2rem;
             padding-bottom: 16px;
+
+            @media (max-width: $breakpoint-tablet) {
+                font-size: 1.8rem;
+            }
         }
 
         p {
@@ -75,6 +103,10 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media (max-width: $breakpoint-mobile) {
+        padding: 16px;
+    }
 
     h2 {
         width: 100%;
@@ -93,6 +125,10 @@ header {
         display: flex;
         flex-wrap: wrap;
         padding: 16px 0px 32px 0px;
+
+        @media (max-width: $breakpoint-tablet) {
+            flex-direction: column;
+        }
     }
 
     button {

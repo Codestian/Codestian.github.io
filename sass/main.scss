@@ -1,7 +1,5 @@
 // CSS RESET
-
-$white: rgb(255, 255, 255);
-$primary: rgb(139, 132, 64);
+@import './components/_variables.scss';
 
 * {
     margin: 0;
