@@ -1,4 +1,4 @@
-$primary: rgb(139, 132, 64);
+@import "./_variables.scss";
 
 .item {
     padding: 16px;
@@ -10,9 +10,14 @@ $primary: rgb(139, 132, 64);
         padding-bottom: 8px;
 
         justify-content: space-between;
-        h3, h4 {
+        h3,
+        h4 {
             color: $primary;
             font-size: 1.4rem;
+
+            @media (max-width: $breakpoint-tablet) {
+                font-size: 1.2rem;
+            }
         }
     }
 
@@ -20,5 +25,9 @@ $primary: rgb(139, 132, 64);
         color: rgb(138, 138, 138);
         text-transform: uppercase;
         font-size: 0.8rem;
+
+        @media (max-width: $breakpoint-tablet) {
+            font-size: 0.6rem;
+        }
     }
 }
