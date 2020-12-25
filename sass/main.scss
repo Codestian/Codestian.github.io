@@ -1,5 +1,5 @@
 // CSS RESET
-@import './components/_variables.scss';
+@import "./components/_variables.scss";
 
 * {
     margin: 0;
@@ -70,6 +70,11 @@ nav {
         .right {
             height: 100%;
             display: flex;
+
+            @media (max-width: $breakpoint-tablet) {
+                display: none;
+            }
+
             a {
                 width: 112px;
                 display: flex;

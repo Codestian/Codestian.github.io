@@ -171,7 +171,7 @@ header {
         font-size: 1.8rem;
         text-transform: uppercase;
         padding: 0px 32px 8px 32px;
-        margin: 0px 128px;
+        margin: 0px 128px 32px 128px;
         border-bottom: 2px solid $white;
 
         @media (max-width: $breakpoint-mobile) {
@@ -181,6 +181,12 @@ header {
 
     h3 {
         color: $white;
-        padding-top: 32px;
+        padding: 0px 0px 8px 0px;
+    }
+
+    p {
+        color: $white;
+        font-size: 0.8rem;
+        padding-bottom: 32px;
     }
 }

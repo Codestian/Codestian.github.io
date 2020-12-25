@@ -71,6 +71,12 @@ nav .content .right {
   display: flex;
 }
 
+@media (max-width: 768px) {
+  nav .content .right {
+    display: none;
+  }
+}
+
 nav .content .right a {
   width: 112px;
   display: flex;
