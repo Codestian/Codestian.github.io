@@ -85,4 +85,19 @@ header p {
     font-size: 0.6rem;
   }
 }
+
+.who {
+  width: 100%;
+  padding: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.who img {
+  width: 400px;
+  object-fit: cover;
+  margin-right: 16px;
+  border: 1px solid gray;
+}
 /*# sourceMappingURL=about.css.map */

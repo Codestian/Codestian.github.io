@@ -48,3 +48,18 @@ header {
         }
     }
 }
+
+.who {
+    width: 100%;
+    padding: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 400px;
+        object-fit: cover;
+        margin-right: 16px;
+        border: 1px solid gray;
+    }
+}
