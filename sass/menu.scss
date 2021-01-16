@@ -13,7 +13,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 32px 32px 0px 32px;
+    padding: 88px 32px 32px 32px;
 
     text-align: center;
 
@@ -91,11 +91,23 @@ header {
                 background: $primary;
                 color: white;
             }
+
+            &:focus {
+                background: rgba(0, 0, 0, 0.6);
+                border: 1px solid transparent;
+                color: white;
+            }
         }
 
         .selected {
             background: $primary;
             color: white;
+
+            &:active,
+            &:focus {
+                background: rgb(102, 97, 47);
+                color: white;
+            }
         }
     }
 
