@@ -70,8 +70,10 @@ nav .content {
 }
 
 nav .content .left {
+  width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 nav .content .left img {
@@ -86,6 +88,28 @@ nav .content .left img {
   }
 }
 
+nav .content .left .hamburger {
+  width: 24px;
+  height: 16px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  nav .content .left .hamburger {
+    display: flex;
+  }
+}
+
+nav .content .left .hamburger div {
+  width: 100%;
+  height: 2px;
+  background: white;
+}
+
 nav .content .right {
   height: 100%;
   display: flex;
@@ -96,6 +120,7 @@ nav .content .right {
   nav .content .right {
     width: 100%;
     flex-direction: column;
+    display: none;
   }
 }
 
@@ -120,6 +145,10 @@ nav .content .right a {
 
 nav .content .right .current {
   background: #8b8440;
+}
+
+nav .content .showNavigation {
+  display: flex;
 }
 
 main {
